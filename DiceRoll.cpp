@@ -1,12 +1,11 @@
 #include <iostream>
-using namespace std;
 #include <stdio.h>
 #include <stdlib.h>
 #include <cstdlib>
 #include <time.h>
 #include "DiceRoll.h"
 #include "Sorter.h"
-//using namespace std;
+using namespace std;
 
 Sorter mySorter;
 
