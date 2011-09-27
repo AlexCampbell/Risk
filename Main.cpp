@@ -23,6 +23,11 @@ void CheckResults(int i){
         cout << "One lost on Both Sides";
     if (i == 3)
         cout << "Two lost on Attack";
+    if (i == 4)
+        cout << "One lost on Defense";
+    if (i == 5)
+        cout << "One lost on Attack";
+
     if (i == 0)
         cout << "Something Asploded";
 

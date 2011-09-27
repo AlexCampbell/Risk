@@ -7,7 +7,7 @@ class Battle{
 public:
 
         Battle();
-          int Results(int Atkroll[], int Defroll[]);
+          int Results(int Atkroll[], int alength, int Defroll[], int dlength);
 
 
 };

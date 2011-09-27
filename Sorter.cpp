@@ -30,7 +30,7 @@ int Sorter::asorter(int arr[], int sz, int arr2[], int sz2){
     std::sort(vec.begin(), vec.end());
     std::cout << " Def Sorted: " << vec << std::endl;}
 
-    int i = myBattle.Results(arr, arr2);
+    int i = myBattle.Results(arr, sz, arr2, sz2);
 
     return i;
 }
