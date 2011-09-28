@@ -90,6 +90,6 @@ namespace def
 
 
 
-                    int i = mySorter.asorter(aroll, alength, droll, dlength);
+                    int i = mySorter.asorter(aroll, droll);
  return i;
 }
