@@ -33,7 +33,9 @@ obj/
 
 # OS generated files #
 ######################
-.DS_Store?
+.DS_Store
 ehthumbs.db
 Icon?
-Thumbs.db
+Thumbs.db.DS_Store
+engine/
+.sconsign.dblite
