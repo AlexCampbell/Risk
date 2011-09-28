@@ -20,7 +20,7 @@ std::ostream& operator<< (std::ostream& out, int_vec& vec){
 
 }
 
-int Sorter::asorter(int arr[], int sz, int arr2[], int sz2){
+int Sorter::asorter(int arry[], int sz, int arry2[], int sz2){
 
     {int_vec vec(arr,arr+sz);
     std::sort(vec.begin(), vec.end());

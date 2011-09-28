@@ -38,7 +38,7 @@ void CheckArmies(){
 
     int AtkRoll = myDiceroll.GetAtkArmies();
     int DefRoll = myDiceroll.GetDefArmies();
-    int i = myDiceroll.aroll(AtkRoll, DefRoll);
+    int i = myDiceroll.Roll(AtkRoll, DefRoll);
     CheckResults(i);
 }
 

@@ -8,6 +8,6 @@ public:
         DiceRoll();
             int GetAtkArmies();
             int GetDefArmies();
-            int aroll(int atk, int def);
+            int Roll(int atk, int def);
 };
 #endif
