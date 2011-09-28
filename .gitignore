@@ -8,6 +8,7 @@
 *.so
 *.depend
 *.cbp
+*.layout
 bin/
 obj/
 

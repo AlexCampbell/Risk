@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include <cstdlib>
 #include <time.h>
+#include <vector>
 #include "DiceRoll.h"
 #include "Sorter.h"
 using namespace std;
@@ -43,47 +44,51 @@ namespace def
         return atk::roll;
 }
 
-    int DiceRoll::aroll(int atk, int def){
-                int aroll [] = {};
-                int droll [] = {};
+
+    int DiceRoll::Roll(int atk, int def){
+                vector<int> aroll;
+                vector<int> droll;
                 int alength;
                 int dlength;
                     srand (time(NULL));
 
                         if (atk >= 3){
-                                aroll[0] = (rand() % 6)+1;
-                                aroll[1]= (rand() % 6)+1;
-                                aroll[2] = (rand() % 6)+1;
+                                aroll.push_back ((rand() % 6)+1);
+                                aroll.push_back ((rand() % 6)+1);
+                                aroll.push_back ((rand() % 6)+1);
                                     cout << "Attacker Rolls: " <<  aroll[0] << " " << aroll[1] << " " << aroll[2];
-                                        alength = 3;
+                                        alength = aroll.size();
                                 }
 
-
                         if (atk == 2){
-                                aroll[0] = (rand() % 6)+1;
-                                aroll[1] = (rand() % 6)+1;
+                                aroll.push_back ((rand() % 6)+1);
+                                aroll.push_back ((rand() % 6)+1);
                                     cout << "Attacker Rolls: " << aroll[0] << " " << aroll[1];
                                         alength = 2;
-                                    }
+                                        }
 
                         if (atk == 1){
-                                aroll[0] = (rand() % 6)+1;
+                                aroll.push_back ((rand() % 6)+1);
                                     cout << "Attacker Rolls: " << aroll[0];
-                                        alength = 1;}
+                                        alength = 1;
+                                        }
+
+
+                        if (def >= 2) {
+                                droll.push_back ((rand() % 6)+1);
+                                droll.push_back ((rand() % 6)+1);
+                                    cout << " Defenders Rolls: " << droll[0] << " " << droll[1];
+                                        dlength = 2;
+                            }
+
 
                         if (def == 1){
-                                droll[0] = (rand() % 6)+1;
+                                droll.push_back ((rand() % 6)+1);
                                     cout << " Defenders Rolls: " << droll[0];
                                         dlength = 1;
                             }
 
 
-                        if (def >= 2) {
-                                droll[0] = (rand() % 6)+1;
-                                droll[1] = (rand() % 6)+1;
-                                    cout << " Defenders Rolls: " << droll[0] << " " << droll[1];
-                                        dlength = 2;
-                            }
 
                     int i = mySorter.asorter(aroll, alength, droll, dlength);
  return i;
