@@ -13,7 +13,7 @@ Battle::Battle(){
 }
 
 
-int Battle::Results(vector<int> Atkroll, vector<int> Defroll){
+int Battle::Results(std::vector<int>& Atkroll, std::vector<int>& Defroll){
 
 
                 if (Atkroll.size() == 3){

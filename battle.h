@@ -1,3 +1,5 @@
+#include <vector>
+
 #ifndef BATTLE_H
 #define BATTLE_H
 #include <vector>
@@ -9,7 +11,7 @@ class Battle{
 public:
 
         Battle();
-          int Results(std::vector<int> Atkroll, vector<int> Defroll);
+          int Results(std::vector<int>& Atkroll, std::vector<int>& Defroll);
 
 
 };
