@@ -1,5 +1,5 @@
 env = Environment(CC = 'clang',
-                  CXX = 'clang')
+                  CXX = 'clang++')
 
 print "CC is: ", env['CC']
 print "CSS is:", env['CXX']
