@@ -28,18 +28,31 @@ namespace def
         }
 
 
- int DiceRoll::GetDefArmies(){
+ int DiceRoll::GetDefArmies(int D){
 
-            cout << "How many units does the defense have? ";
-            cin >> def::roll;
+        if (D > 1){
 
-        return def::roll;
+            def::roll = 2;
+
+        else
+
+            def::roll = 1;}
+
+return def::roll;
     }
 
-  int DiceRoll::GetAtkArmies(){
+  int DiceRoll::GetAtkArmies(int A){
 
-            cout << "How Many Units is the Attacker using? ";
+  retry:    cout << "How Many Units is the Attacker using? ";
             cin >> atk::roll;
+
+        if (atk::roll > A){
+            if (atk::roll - A == 0){
+                cout << "Sorry, there needs to be at least one left. Try Again.";
+                    goto: retry}
+            else
+                cout << "Sorry you do not have enough. Try Again";
+
 
         return atk::roll;
 }
@@ -48,8 +61,6 @@ namespace def
     int DiceRoll::Roll(int atk, int def){
                 vector<int> aroll;
                 vector<int> droll;
-                int alength;
-                int dlength;
                     srand (time(NULL));
 
                         if (atk >= 3){
@@ -57,20 +68,17 @@ namespace def
                                 aroll.push_back ((rand() % 6)+1);
                                 aroll.push_back ((rand() % 6)+1);
                                     cout << "Attacker Rolls: " <<  aroll[0] << " " << aroll[1] << " " << aroll[2];
-                                        alength = aroll.size();
                                 }
 
                         if (atk == 2){
                                 aroll.push_back ((rand() % 6)+1);
                                 aroll.push_back ((rand() % 6)+1);
                                     cout << "Attacker Rolls: " << aroll[0] << " " << aroll[1];
-                                        alength = 2;
                                         }
 
                         if (atk == 1){
                                 aroll.push_back ((rand() % 6)+1);
                                     cout << "Attacker Rolls: " << aroll[0];
-                                        alength = 1;
                                         }
 
 
@@ -78,18 +86,16 @@ namespace def
                                 droll.push_back ((rand() % 6)+1);
                                 droll.push_back ((rand() % 6)+1);
                                     cout << " Defenders Rolls: " << droll[0] << " " << droll[1];
-                                        dlength = 2;
                             }
 
 
                         if (def == 1){
                                 droll.push_back ((rand() % 6)+1);
                                     cout << " Defenders Rolls: " << droll[0];
-                                        dlength = 1;
                             }
 
 
 
-                    int i = mySorter.asorter(aroll, alength, droll, dlength);
+                    int i = mySorter.asorter(aroll, droll);
  return i;
 }

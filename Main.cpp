@@ -15,7 +15,7 @@ DiceRoll myDiceroll;
 
 
 
-void CheckResults(int i){
+int CheckResults(int i){
 
     if (i == 1)
         cout << "Two lost on Denfense";
@@ -31,23 +31,49 @@ void CheckResults(int i){
     if (i == 0)
         cout << "Something Asploded";
 
+ return i
 }
 
 
-void CheckArmies(){
+int CheckArmies(int A, int D){
 
-    int AtkRoll = myDiceroll.GetAtkArmies();
-    int DefRoll = myDiceroll.GetDefArmies();
+    int AtkRoll = myDiceroll.GetAtkArmies(A);
+    int DefRoll = myDiceroll.GetDefArmies(D);
     int i = myDiceroll.Roll(AtkRoll, DefRoll);
-    CheckResults(i);
+    int i = CheckResults(i);
 }
 
+
+int GetTotalA(){
+
+    cout << "How many units are in the attakers country";
+    cin >> attack;
+
+    return attack;
+
+}
+
+
+int GetTotalD(){
+
+    cout << "How many units are in the defenders country";
+    cin >> defense;
+
+return defense;
+}
 
 int main(){
+
+  int A = GetTotalA()
+
+  int D = GetTotalD()
 
 restart:
 
     CheckArmies();
+
+
+
 
     int anw;
     cout << "  Do You Want to Play Again?";

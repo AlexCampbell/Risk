@@ -9,7 +9,7 @@ class Sorter: public Battle{
 
 public:
         Sorter();
-        int asorter(int arry[], int sz, int arry2[], int sz2);
+        int asorter(std::vector<int> arr, std::vector<int> arr2);
     };
 
 

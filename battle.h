@@ -1,13 +1,15 @@
 #ifndef BATTLE_H
 #define BATTLE_H
-
+#include <vector>
+#include <algorithm>
+using namespace std;
 
 class Battle{
 
 public:
 
         Battle();
-          int Results(int Atkroll[], int alength, int Defroll[], int dlength);
+          int Results(std::vector<int> Atkroll, vector<int> Defroll);
 
 
 };

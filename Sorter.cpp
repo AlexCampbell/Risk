@@ -20,17 +20,15 @@ std::ostream& operator<< (std::ostream& out, int_vec& vec){
 
 }
 
-int Sorter::asorter(int arry[], int sz, int arry2[], int sz2){
+int Sorter::asorter(std::vector<int> arr, std::vector<int> arr2){
 
-    {int_vec vec(arr,arr+sz);
-    std::sort(vec.begin(), vec.end());
-    std::cout << " Atk Sorted: " << vec << std::endl;}
+    {std::sort(arr.begin(), arr.end());
+    std::cout << " Atk Sorted: " << arr << std::endl;}
 
-    {int_vec vec(arr2,arr2+sz2);
-    std::sort(vec.begin(), vec.end());
-    std::cout << " Def Sorted: " << vec << std::endl;}
+    {std::sort(arr2.begin(), arr2.end());
+    std::cout << " Def Sorted: " << arr2 << std::endl;}
 
-    int i = myBattle.Results(arr, sz, arr2, sz2);
+    int i = myBattle.Results(arr, arr2);
 
     return i;
 }
