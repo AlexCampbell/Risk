@@ -6,8 +6,8 @@ class DiceRoll: public Battle{
 
 public:
         DiceRoll();
-            int GetAtkArmies();
-            int GetDefArmies();
+            int GetAtkArmies(int A);
+            int GetDefArmies(int D);
             int Roll(int atk, int def);
 };
 #endif
