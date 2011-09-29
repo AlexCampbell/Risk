@@ -6,27 +6,31 @@
 
 Battle myBattle;
 
-Sorter::Sorter(){
+Sorter::Sorter() {
+    
 }
 
 
 typedef std::vector<int> int_vec;
 typedef std::vector<int>::iterator int_iter;
 
-std::ostream& operator<< (std::ostream& out, int_vec& vec){
+std::ostream& operator<< (std::ostream& out, int_vec& vec) {
     for (int_iter iter = vec.begin(); iter != vec.end(); iter++)
         out << " " << *iter;
     return out;
-
 }
 
-int Sorter::asorter(std::vector<int> arr, std::vector<int> arr2){
+int Sorter::asorter(std::vector<int>& arr, std::vector<int>& arr2) {
 
-    {std::sort(arr.begin(), arr.end());
-    std::cout << " Atk Sorted: " << arr << std::endl;}
+    {
+        std::sort(arr.begin(), arr.end());
+        std::cout << " Atk Sorted: " << arr << std::endl;
+    }
 
-    {std::sort(arr2.begin(), arr2.end());
-    std::cout << " Def Sorted: " << arr2 << std::endl;}
+    {
+        std::sort(arr2.begin(), arr2.end());
+        std::cout << " Def Sorted: " << arr2 << std::endl;
+    }
 
     int i = myBattle.Results(arr, arr2);
 
