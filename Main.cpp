@@ -98,7 +98,7 @@ reroll:
         cout << "Attackers Win!" << endl;}
 
 
-reanswer:
+reanw:
 
     int anw;
         cout << "  Do You Want to Play Again?" << endl;
@@ -109,7 +109,7 @@ reanswer:
 
         if ((anw == 1) && (A == 1) && (D == 0)){
             cout << "Can't Reroll. Please quit or restart." << endl;
-            goto reanswer;}
+            goto reanw;}
 
         if (anw == 0){
             goto restart;}

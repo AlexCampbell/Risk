@@ -15,9 +15,8 @@ Battle::Battle(){
 
 int Battle::Results(std::vector<int>& Atkroll, std::vector<int>& Defroll){
 
-
                 if (Atkroll.size() == 3){
-                    if (Defroll.size() == 2)
+                    if (Defroll.size() == 2){
                         if (Atkroll[2] > Defroll[1]){
                             if (Atkroll[1] > Defroll[0])
                                 return 1;
@@ -27,7 +26,7 @@ int Battle::Results(std::vector<int>& Atkroll, std::vector<int>& Defroll){
                             if (Atkroll[1] <= Defroll[0])
                                 return 3;
                             else
-                                return 2;}
+                                return 2;}}
 
                     else if (Defroll.size() == 1){
                            if (Atkroll[2] > Defroll[0])
