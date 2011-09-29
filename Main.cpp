@@ -107,7 +107,7 @@ reanw:
         if ((anw == 1) && (A != 1) && (D != 0)){
             goto reroll;}
 
-        if ((anw == 1) && (A == 1) && (D == 0)){
+        if (anw == (1) && ((A == 1) || (D == 0))){
             cout << "Can't Reroll. Please quit or restart." << endl;
             goto reanw;}
 
