@@ -1,8 +1,5 @@
 
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <cstdlib>
 #include <time.h>
 #include <vector>
 
@@ -37,7 +34,7 @@ int DiceRoll::GetAtkArmies(int A) {
     do {
         cout << "How Many Units is the Attacker using?: ";
         cin >> atk::roll;
-        
+
         if (atk::roll >= A) {
             if ((atk::roll - A) <= 0) {
                 cout << "Sorry, there needs to be at least one left. Try again." << endl;
@@ -49,7 +46,7 @@ int DiceRoll::GetAtkArmies(int A) {
         } else
             break;
     } while (true);
-    
+
     return atk::roll;
 }
 
@@ -61,7 +58,7 @@ int DiceRoll::Roll(int atk, int def) {
     for (size_t i = 0; i < atk; ++i)
         aroll.push_back ((rand() % 6)+1);
     cout << "Attacker Rolls: " << aroll << endl;
-    
+
     for (size_t i = 0; i < def; ++i)
         droll.push_back ((rand() % 6)+1);
     cout << "Defenders Rolls: " << droll << endl;

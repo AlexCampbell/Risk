@@ -1,6 +1,7 @@
 #ifndef Sorter_H
 #define Sorter_H
 
+#include <iostream>
 #include <vector>
 #include <algorithm>
 
