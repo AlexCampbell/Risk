@@ -1,10 +1,5 @@
 #include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <cstdlib>
-#include <time.h>
-#include <algorithm>
-#include <vector>
+
 #include "DiceRoll.h"
 #include "Sorter.h"
 using namespace std;

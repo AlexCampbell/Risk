@@ -1,11 +1,3 @@
-//Results of Battle
-// 
-//1 = Atk Wins both rolls 
-//2 = 1 loss on both sides 
-// 3 = Def wins two 
-// 4 = Atk wins 1 
-//5 Def wins 1
-
 #include <iostream>
 #include <vector>
 #include <algorithm>

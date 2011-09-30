@@ -1,13 +1,14 @@
-#include "Sorter.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
+
+#include "Sorter.h"
 #include "battle.h"
 
 Battle myBattle;
 
 Sorter::Sorter() {
-    
+
 }
 
 std::ostream& operator<< (std::ostream& out, int_vec& vec) {
