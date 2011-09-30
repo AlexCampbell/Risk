@@ -10,10 +10,6 @@ Sorter::Sorter() {
     
 }
 
-
-typedef std::vector<int> int_vec;
-typedef std::vector<int>::iterator int_iter;
-
 std::ostream& operator<< (std::ostream& out, int_vec& vec) {
     for (int_iter iter = vec.begin(); iter != vec.end(); iter++)
         out << " " << *iter;
