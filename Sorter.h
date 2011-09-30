@@ -6,6 +6,11 @@
 
 #include "battle.h"
 
+typedef std::vector<int> int_vec;
+typedef std::vector<int>::iterator int_iter;
+
+std::ostream& operator<< (std::ostream& out, int_vec& vec);
+
 class Sorter: public Battle {
 public:
     Sorter();

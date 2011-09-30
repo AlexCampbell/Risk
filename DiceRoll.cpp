@@ -11,12 +11,6 @@
 
 using namespace std;
 
-ostream& operator<< (ostream& out, vector<int>& vec){
-    for (vector<int>::iterator iter = vec.begin(); iter != vec.end(); iter++)
-        out << " " << *iter;
-    return out;
-}
-
 Sorter mySorter;
 
 DiceRoll::DiceRoll() {
@@ -70,7 +64,7 @@ int DiceRoll::Roll(int atk, int def) {
     
     for (size_t i = 0; i < def; ++i)
         droll.push_back ((rand() % 6)+1);
-    count << "Defenders Rolls: " << droll << endl;
+    cout << "Defenders Rolls: " << droll << endl;
 
     return mySorter.asorter(aroll, droll);
 }
