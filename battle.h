@@ -11,6 +11,7 @@ class Battle {
 public:
     Battle();
     int Results(std::vector<int>& Atkroll, std::vector<int>& Defroll);
+    int BattleControl();
 };
 
 #endif
